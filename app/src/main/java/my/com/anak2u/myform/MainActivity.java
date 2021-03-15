@@ -36,8 +36,14 @@ public class MainActivity extends AppCompatActivity {
         Log.d("debug",
                 messageEditText.getText().toString());
 
-        Intent intent = new Intent(MainActivity.this,
+        Intent intent = new Intent(
+                MainActivity.this,
                 DetailActivity.class);
+        intent.putExtra("name",nameEditText.getText().toString());
+        intent.putExtra("email",emailEditText.getText().toString());
+        intent.putExtra("cell",cellEditText.getText().toString());
+        intent.putExtra("phone",phoneEditText.getText().toString());
+        intent.putExtra("message",messageEditText.getText().toString());
         startActivity(intent);
     }
 }
